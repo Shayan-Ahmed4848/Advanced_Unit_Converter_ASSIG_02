@@ -74,7 +74,7 @@ units = {
 if mode == "Simple":
     # Simple Mode: User selects category and units
     category = st.selectbox("Select Category:", list(units.keys()))
-    value = st.number_input("Enter value:", min_value=0.0, format="%.2f", placeholder="Enter a number")
+    value = st.number_input("Enter value:", min_value=0.0, format="%.2f")  # Removed placeholder parameter
     from_unit = st.selectbox("Select from unit:", units[category])
     to_unit = st.selectbox("Select to unit:", units[category])
 
